@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 body{
   background-color: #7EC855;
   font-family: 'Roboto', sans-serif;
@@ -30,8 +29,13 @@ body{
 .item{
 	display:flex;
     padding: 15px 0px;
-    border-bottom: 1px solid #E1E8EE;
+  
 }
+.item:nth-child(2) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
 .remove-btn{
 	margin: auto;
 }
@@ -40,7 +44,30 @@ body{
     background: none;
 }
 .like-btn{
-	margin: auto;
+	background: url("images/twitter-heart.png");
+    background-size: cover;
+    margin-top: 9;
+    width: 60px;
+    height: 60px;
+    background-position: left; 
+}
+.like-btn:hover{
+    animation-name: liked;
+    animation-iteration-count: 1;
+    animation-duration: 8s;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+@keyframes liked{
+    0%{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    100%{
+        background-position: right;
+    }
 }
 .product{
 	margin: auto;
